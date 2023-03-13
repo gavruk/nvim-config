@@ -26,10 +26,10 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.bo.softtabstop = 2
 
+vim.opt.clipboard = "unnamed,unnamedplus"
 vim.opt.incsearch = true
 vim.opt.hls = true
 vim.opt.wrap = false
---vim.opt.nowrap = true
 vim.opt.number = true
 vim.opt.ruler = true
 vim.opt.ignorecase = true
