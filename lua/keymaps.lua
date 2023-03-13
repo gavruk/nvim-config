@@ -5,7 +5,7 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>d", ":NvimTreeToggle<CR>", opts)
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
-vim.keymap.set("n", "<C-f>", ":b#", opts)
+vim.keymap.set("n", "<C-f>", ":b#<CR>", opts)
 vim.keymap.set("n", "<leader><space>", ":noh<CR>", opts)
 
 vim.keymap.set("i", "jj", "<ESC>", opts)

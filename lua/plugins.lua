@@ -92,7 +92,12 @@ return require('packer').startup(function(use)
       {"nvim-lua/plenary.nvim"},
       {"nvim-treesitter/nvim-treesitter"}
     }
-}
+  }
 
+  use {
+	"terrortylor/nvim-comment",
+    config = function() require("nvim_comment").setup() end
+  }
 
+  require("nvim_comment").setup()
 end)
