@@ -38,3 +38,8 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
 --Select all
 vim.keymap.set("n", "vaa", "ggvGg_", opts)
 vim.keymap.set("n", "Vaa", "ggVG", opts)
+
+vim.keymap.set("n", "<D-j>", "mz:m+<cr>`z", opts)
+vim.keymap.set("n", "<D-k>", "mz:m-2<cr>`z", opts)
+vim.keymap.set("v", "<D-j>", ":m'>+<cr>`<my`>mzgv`yo`z", opts)
+vim.keymap.set("v", "<D-k>", ":m'<-2<cr>`>my`<mzgv`yo`z", opts)
