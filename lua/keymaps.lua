@@ -10,6 +10,9 @@ vim.keymap.set("n", "<leader><space>", ":noh<CR>", opts)
 
 vim.keymap.set("i", "jj", "<ESC>", opts)
 
+vim.keymap.set("n", "j", "gj", opts)
+vim.keymap.set("n", "k", "gk", opts)
+
 --Working with tabs
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", opts)
 vim.keymap.set("n", "<leader>th", ":tabprev<CR>", opts)
