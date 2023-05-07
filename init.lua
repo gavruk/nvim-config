@@ -16,7 +16,7 @@ require('configs/null-ls')
 require('configs/prettier')
 require('configs/autopairs')
 
-vim.cmd([[colorscheme monokai-pro]])
+vim.cmd([[colorscheme vscode]])
 
 vim.mapleader = ","
 vim.g.mapleader = ","

@@ -16,6 +16,41 @@ return require('packer').startup(function(use)
 
   use "williamboman/mason.nvim"
 
+  use({
+    "Mofiqul/vscode.nvim",
+    config = function()
+        -- support both dark and light style
+        vim.o.background = "dark"
+
+        require('vscode').setup({
+            -- Alternatively set style in setup
+            -- style = 'light'
+
+            -- Enable transparent background
+            transparent = true,
+
+            -- Enable italic comment
+            italic_comments = true,
+
+            -- Disable nvim-tree background color
+            disable_nvimtree_bg = true,
+
+            -- Override colors (see ./lua/vscode/colors.lua)
+            color_overrides = {
+                vscLineNumber = '#FFFFFF',
+            },
+
+            -- Override highlight groups (see ./lua/vscode/theme.lua)
+            group_overrides = {
+                -- this supports the same val table as vim.api.nvim_set_hl
+                -- use colors from this colorscheme by requiring vscode.colors!
+                Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
+            }
+        })
+        require('vscode').load()
+    end,
+  })
+
   use {
     "neovim/nvim-lspconfig",
   }
@@ -98,6 +133,7 @@ return require('packer').startup(function(use)
 	"terrortylor/nvim-comment",
     config = function() require("nvim_comment").setup() end
   }
-
   require("nvim_comment").setup()
+
+  use('github/copilot.vim')
 end)
