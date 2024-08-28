@@ -7,8 +7,7 @@ require('configs/cmp')
 require('configs/telescope')
 require('configs/nvim-tree')
 require('configs/nvim-treesitter')
-require('configs/monokai-pro')
-require('configs/blankline')
+--require('configs/blankline')
 require('configs/gitsigns')
 require('configs/lualine')
 require('configs/luasnip')
@@ -16,7 +15,9 @@ require('configs/null-ls')
 require('configs/prettier')
 require('configs/autopairs')
 
-vim.cmd([[colorscheme vscode]])
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
+
 
 vim.mapleader = ","
 vim.g.mapleader = ","
