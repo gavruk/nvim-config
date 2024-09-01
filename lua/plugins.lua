@@ -37,6 +37,8 @@ return require('packer').startup(function(use)
     run = ':TSUpdate'
   }
 
+  use 'NvChad/nvim-colorizer.lua'
+
   use "lukas-reineke/indent-blankline.nvim"
 
   use {

@@ -14,6 +14,7 @@ require('configs/luasnip')
 require('configs/null-ls')
 require('configs/prettier')
 require('configs/autopairs')
+require('configs/colorizer')
 
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
