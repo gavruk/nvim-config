@@ -75,11 +75,6 @@ return require('packer').startup(function(use)
     requires = { 'nvim-web-devicons', opt = true }
   }
 
-  use {
-    'akinsho/bufferline.nvim', tag = "v3.*", 
-    requires = 'nvim-web-devicons'
-  }
-
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
 
@@ -96,4 +91,36 @@ return require('packer').startup(function(use)
     config = function() require("nvim_comment").setup() end
   }
   require("nvim_comment").setup()
+
+  use 'roobert/action-hints.nvim'
+  require("action-hints").setup()
+
+  use({
+    "utilyre/barbecue.nvim",
+    tag = "*",
+    requires = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    after = "nvim-web-devicons", -- keep this if you're using NvChad
+    config = function()
+      require("barbecue").setup()
+    end,
+  })
+
+  
+  use 'nanozuki/tabby.nvim'
+
+  use {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        -- config
+      }
+    end,
+    requires = {'nvim-tree/nvim-web-devicons'}
+  }
+
+
 end)

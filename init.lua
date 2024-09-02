@@ -7,7 +7,7 @@ require('configs/cmp')
 require('configs/telescope')
 require('configs/nvim-tree')
 require('configs/nvim-treesitter')
---require('configs/blankline')
+require('configs/blankline')
 require('configs/gitsigns')
 require('configs/lualine')
 require('configs/luasnip')
@@ -15,6 +15,7 @@ require('configs/null-ls')
 require('configs/prettier')
 require('configs/autopairs')
 require('configs/colorizer')
+require('configs/tabby')
 
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
@@ -28,6 +29,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.bo.softtabstop = 2
 
+vim.opt.updatetime = 200
 vim.opt.clipboard = "unnamed,unnamedplus"
 vim.opt.fenc = "utf-8"
 vim.opt.encoding = "utf-8"
